@@ -55,11 +55,11 @@ export default function Navbar() {
               className="h-8 sm:h-9 w-auto object-contain shrink-0"
             />
             <div>
-              <span className="block font-display text-base sm:text-lg font-bold uppercase tracking-wide text-white leading-none">
+              <span className="block font-display text-base sm:text-[17px] font-medium tracking-[-0.025em] text-white leading-none">
                 Thamburatti <span className="text-amber-500">Group</span>
               </span>
-              <span className="block text-[10px] sm:text-[11px] text-zinc-400 mt-0.5 leading-none">
-                Tipper Transport &amp; Materials • Kanhangad
+              <span className="block font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-400 mt-1 leading-none">
+                Tipper Transport • Kanhangad
               </span>
             </div>
           </Link>

@@ -12,13 +12,13 @@ export default function Services() {
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
         <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
             Materials &amp; Tipper Transport
           </p>
-          <h1 className="font-display text-4xl sm:text-5xl font-bold uppercase tracking-wide text-white mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mt-2">
             Construction Materials We Supply
           </h1>
-          <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3">
+          <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
             Direct crusher-to-site delivery of M-Sand, P-Sand, 20mm &amp; 40mm granite metal, and stone dust across Kanhangad, Kasaragod, and nearby areas.
           </p>
         </ScrollReveal>
@@ -39,10 +39,10 @@ export default function Services() {
       <section className="py-20 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
               Material Guide
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
               Where Each Material Is Used
             </h2>
           </ScrollReveal>
@@ -53,10 +53,10 @@ export default function Services() {
                 <div className="bg-[#0B0C0E] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 sm:p-8 space-y-4 h-full transition-colors">
                   <div className="flex items-start justify-between border-b border-zinc-800 pb-4 gap-4">
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
+                      <span className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500 block">
                         {item.code}
                       </span>
-                      <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white mt-0.5">
+                      <h3 className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-white mt-1">
                         {item.fullName}
                       </h3>
                     </div>
@@ -102,10 +102,10 @@ export default function Services() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <ScrollReveal direction="left" className="lg:col-span-7 space-y-5">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+                  <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
                     Tipper Service
                   </p>
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+                  <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2 leading-tight">
                     Eicher Tipper Transport &amp; Site Unloading
                   </h2>
                 </div>
@@ -170,10 +170,10 @@ export default function Services() {
       <section className="py-20 bg-[#121418]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <ScrollReveal>
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
               FAQ
             </p>
-            <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white mt-1">
+            <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white mt-2">
               Common Questions
             </h2>
           </ScrollReveal>

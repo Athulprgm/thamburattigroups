@@ -135,13 +135,13 @@ export default function Contact() {
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
         <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
             Contact Us
           </p>
-          <h1 className="font-display text-4xl sm:text-5xl font-bold uppercase tracking-wide text-white mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mt-2">
             Book a Load or Check Today&apos;s Rates
           </h1>
-          <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3">
+          <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
             {COMPANY_INFO.contactSubheading}
           </p>
         </ScrollReveal>
@@ -154,7 +154,7 @@ export default function Contact() {
             {/* Left Column: Direct Contact Info */}
             <StaggerContainer className="lg:col-span-5 space-y-4">
               <StaggerItem>
-                <h2 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
+                <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Direct Phone &amp; WhatsApp
                 </h2>
                 <p className="text-zinc-400 text-sm mt-1">
@@ -342,7 +342,7 @@ export default function Contact() {
             <ScrollReveal direction="right" delay={0.1} className="lg:col-span-7">
               <div className="bg-[#121418] border border-zinc-800 rounded-xl p-6 sm:p-8 space-y-6">
                 <div>
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
+                  <h3 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                     Send an Enquiry
                   </h3>
                   <p className="text-zinc-400 text-xs sm:text-sm mt-1">

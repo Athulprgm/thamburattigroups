@@ -20,7 +20,7 @@ export default function Footer() {
                 alt="Thamburatti Group Logo"
                 className="h-9 w-auto object-contain shrink-0"
               />
-              <span className="font-display text-lg font-bold uppercase tracking-wide text-white">
+              <span className="font-display text-lg font-semibold tracking-tight text-white">
                 Thamburatti <span className="text-amber-500">Group</span>
               </span>
             </Link>

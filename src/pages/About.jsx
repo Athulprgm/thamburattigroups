@@ -11,13 +11,13 @@ export default function About() {
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
         <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
             About Us
           </p>
-          <h1 className="font-display text-4xl sm:text-5xl font-bold uppercase tracking-wide text-white mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mt-2">
             Thamburatti Group, Kanhangad
           </h1>
-          <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3">
+          <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
             Local Eicher tipper transport and building material suppliers serving homeowners, masons, and contractors across Kasaragod district.
           </p>
         </ScrollReveal>
@@ -28,7 +28,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <ScrollReveal direction="left" className="lg:col-span-7 space-y-5">
-              <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white leading-tight">
                 Reliable Material Supply for Every Stage of Construction
               </h2>
 
@@ -76,10 +76,10 @@ export default function About() {
       <section className="py-20 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
               Our Operations
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
               What We Do
             </h2>
           </ScrollReveal>
@@ -134,10 +134,10 @@ export default function About() {
       <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
               Our Standards
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
               Why Builders &amp; Homeowners Trust Us
             </h2>
           </ScrollReveal>
@@ -146,10 +146,10 @@ export default function About() {
             {WHY_CHOOSE_US.map((item, idx) => (
               <StaggerItem key={idx}>
                 <div className="bg-[#121418] border border-zinc-800 hover:border-zinc-700 p-6 rounded-xl space-y-2.5 h-full transition-colors">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
+                  <span className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-amber-500 block">
                     {item.subtitle}
                   </span>
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-white">
                     {item.title}
                   </h3>
                   <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
@@ -168,7 +168,7 @@ export default function About() {
           <ScrollReveal direction="scale" className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-8 sm:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
-                <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white">
+                <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Clean Material &amp; Honest Measurement
                 </h2>
 

@@ -32,8 +32,8 @@ export default function Home() {
 
   return (
     <div className="bg-[#0B0C0E] text-zinc-100">
-      {/* HERO SECTION */}
-      <section className="relative min-h-[82vh] flex items-center border-b border-zinc-800 overflow-hidden">
+      {/* HERO SECTION (Sticky so the next section scrolls over it) */}
+      <section className="sticky top-16 z-0 min-h-[84vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
             src="/gemini_generated_video_51bf42da.mp4"
@@ -51,7 +51,6 @@ export default function Home() {
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C0E]/90 via-[#0B0C0E]/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-black/30" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
@@ -65,16 +64,16 @@ export default function Home() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-amber-500 text-xs font-semibold uppercase tracking-widest"
+              className="font-mono text-amber-500 text-[11px] font-normal uppercase tracking-[0.18em]"
             >
-              Kanhangad, Kasaragod
+              Kanhangad • Kasaragod
             </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.18 }}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-white leading-[1.05]"
+              className="font-display text-4xl sm:text-5xl lg:text-[3.35rem] font-medium tracking-[-0.035em] text-white leading-[1.08]"
             >
               Building Materials &amp;{' '}
               <span className="text-amber-500">Tipper Service</span>
@@ -84,7 +83,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.26 }}
-              className="text-sm sm:text-base text-zinc-300"
+              className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed"
             >
               M-Sand, P-Sand, Crushed Metal &amp; Stone Dust delivered directly to your site.
             </motion.p>
@@ -119,26 +118,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section className="py-20 lg:py-24 bg-[#0B0C0E] border-b border-zinc-800 overflow-hidden">
+      {/* CONTENT OVERLAY WRAPPER */}
+      <div className="relative z-10 bg-[#0B0C0E] border-t border-zinc-800">
+        {/* ABOUT SECTION */}
+        <section className="py-20 lg:py-24 bg-transparent border-b border-zinc-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <ScrollReveal direction="left" className="lg:col-span-5">
-              <div className="bg-[#121418] rounded-xl p-8 sm:p-10 border border-zinc-800 flex items-center justify-center">
+              <div className="flex items-center justify-center">
                 <img
                   src={logoImg}
                   alt="Thamburatti Group Kanhangad"
-                  className="w-full max-w-[360px] h-auto object-contain"
+                  className="w-full max-w-[380px] h-auto object-contain"
                 />
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.1} className="lg:col-span-7 space-y-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
                   About Thamburatti Group
                 </p>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2 leading-tight">
                   Dependable Tipper Transport &amp; Crusher Materials in Kasaragod
                 </h2>
               </div>
@@ -187,14 +188,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
                 What We Supply
               </p>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
                 Construction Materials
               </h2>
             </div>
-            <p className="text-zinc-400 text-sm max-w-md">
+            <p className="text-zinc-400 text-sm max-w-md leading-relaxed">
               We supply washed sand, granite metal, and quarry dust in full tipper loads for house construction and commercial projects.
             </p>
           </ScrollReveal>
@@ -223,10 +224,10 @@ export default function Home() {
       <section className="py-20 lg:py-24 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
               Why Work With Us
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
               Straightforward Service You Can Count On
             </h2>
           </ScrollReveal>
@@ -265,10 +266,10 @@ export default function Home() {
       <section className="py-20 lg:py-24 bg-[#0B0C0E] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
               Ordering Process
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
               How We Deliver to Your Site
             </h2>
           </ScrollReveal>
@@ -277,11 +278,11 @@ export default function Home() {
             {WORKING_PROCESS.map((proc) => (
               <StaggerItem key={proc.step}>
                 <div className="bg-[#121418] border border-zinc-800 hover:border-zinc-700 p-6 rounded-xl space-y-3 h-full transition-colors">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500 text-zinc-950 font-display font-bold text-lg">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500 text-zinc-950 font-mono font-semibold text-sm">
                     {proc.step}
                   </span>
 
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-white">
                     {proc.title}
                   </h3>
 
@@ -301,10 +302,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <ScrollReveal direction="left" className="lg:col-span-6 space-y-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
                   Service Areas
                 </p>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2 leading-tight">
                   Based in Kanhangad, Delivering Across Kasaragod
                 </h2>
               </div>
@@ -369,7 +370,7 @@ export default function Home() {
       {/* BOTTOM CALL TO ACTION */}
       <section className="py-20 bg-[#0B0C0E]">
         <ScrollReveal direction="scale" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white">
             Need M-Sand, P-Sand, Metal, or Stone Dust?
           </h2>
 
@@ -419,6 +420,7 @@ export default function Home() {
           </p>
         </ScrollReveal>
       </section>
+      </div>
     </div>
   );
 }

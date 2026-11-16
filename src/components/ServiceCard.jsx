@@ -24,13 +24,13 @@ export default function ServiceCard({ service, index = 0 }) {
     >
       <div className="space-y-4">
         <div className="border-b border-zinc-800 pb-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
+          <span className="font-mono text-[11px] font-normal uppercase tracking-[0.14em] text-amber-500 block">
             {service.code}
           </span>
-          <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white mt-1">
+          <h3 className="font-display text-xl font-medium tracking-[-0.025em] text-white mt-1.5">
             {service.name}
           </h3>
-          <p className="text-xs text-zinc-400 mt-0.5">{service.fullName}</p>
+          <p className="text-xs text-zinc-400 mt-1">{service.fullName}</p>
         </div>
 
         <p className="text-zinc-300 text-sm leading-relaxed">
