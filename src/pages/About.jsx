@@ -11,10 +11,10 @@ export default function About() {
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
         <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
             About Us
           </p>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mt-2">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.036em] text-white mt-2">
             Thamburatti Group, Kanhangad
           </h1>
           <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
@@ -28,7 +28,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <ScrollReveal direction="left" className="lg:col-span-7 space-y-5">
-              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white leading-tight">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white leading-tight">
                 Reliable Material Supply for Every Stage of Construction
               </h2>
 
@@ -39,13 +39,13 @@ export default function About() {
               </div>
 
               <div className="pt-2 flex flex-wrap gap-2">
-                <span className="px-3.5 py-1.5 rounded-lg bg-[#121418] border border-zinc-800 text-xs font-medium text-zinc-200">
+                <span className="px-3.5 py-1.5 rounded-lg bg-[#121418] border border-zinc-800 font-mono text-[11px] tracking-[0.04em] text-zinc-200">
                   Kanhangad, Kasaragod
                 </span>
-                <span className="px-3.5 py-1.5 rounded-lg bg-[#121418] border border-zinc-800 text-xs font-medium text-amber-400">
+                <span className="px-3.5 py-1.5 rounded-lg bg-[#121418] border border-zinc-800 font-mono text-[11px] tracking-[0.04em] text-amber-400">
                   Own Eicher Tipper Fleet
                 </span>
-                <span className="px-3.5 py-1.5 rounded-lg bg-[#121418] border border-zinc-800 text-xs font-medium text-zinc-200">
+                <span className="px-3.5 py-1.5 rounded-lg bg-[#121418] border border-zinc-800 font-mono text-[11px] tracking-[0.04em] text-zinc-200">
                   M-Sand • P-Sand • Metal • Stone Dust
                 </span>
               </div>
@@ -59,10 +59,10 @@ export default function About() {
                   className="w-full h-[360px] object-cover object-center"
                 />
                 <div className="p-4 border-t border-zinc-800 bg-[#121418]">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-amber-500">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-amber-500">
                     Our Fleet
                   </p>
-                  <p className="text-sm text-zinc-200 mt-0.5">
+                  <p className="text-sm text-zinc-200 mt-1">
                     Direct site tipping across Kanhangad, Nileshwar, Bekal, and Kasaragod.
                   </p>
                 </div>
@@ -76,10 +76,10 @@ export default function About() {
       <section className="py-20 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
               Our Operations
             </p>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2">
               What We Do
             </h2>
           </ScrollReveal>
@@ -90,10 +90,10 @@ export default function About() {
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
                   <Truck className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="font-display text-lg font-medium tracking-[-0.025em] text-white">
                   Eicher Tipper Transport
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-[13.5px] leading-relaxed">
                   We run heavy-duty Eicher tippers built to carry sand, metal, and quarry dust safely over main roads as well as narrow village and residential plot access roads.
                 </p>
               </div>
@@ -104,10 +104,10 @@ export default function About() {
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
                   <Layers className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="font-display text-lg font-medium tracking-[-0.025em] text-white">
                   Direct Crusher Sourcing
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-[13.5px] leading-relaxed">
                   Whether you need washed M-Sand for concrete, fine P-Sand for plastering, 20mm/40mm blue granite metal, or stone dust, we load directly from trusted regional crushers.
                 </p>
               </div>
@@ -118,10 +118,10 @@ export default function About() {
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="font-display text-lg font-medium tracking-[-0.025em] text-white">
                   Local Kasaragod Service
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-[13.5px] leading-relaxed">
                   Based in Kanhangad, we know the local routes and site conditions across Kasaragod district and work closely with local builders, masons, and house owners.
                 </p>
               </div>
@@ -134,10 +134,10 @@ export default function About() {
       <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
               Our Standards
             </p>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2">
               Why Builders &amp; Homeowners Trust Us
             </h2>
           </ScrollReveal>
@@ -146,13 +146,13 @@ export default function About() {
             {WHY_CHOOSE_US.map((item, idx) => (
               <StaggerItem key={idx}>
                 <div className="bg-[#121418] border border-zinc-800 hover:border-zinc-700 p-6 rounded-xl space-y-2.5 h-full transition-colors">
-                  <span className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-amber-500 block">
+                  <span className="font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-amber-500 block">
                     {item.subtitle}
                   </span>
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-white">
+                  <h3 className="font-display text-lg font-medium tracking-[-0.025em] text-white">
                     {item.title}
                   </h3>
-                  <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-zinc-400 text-xs sm:text-[13.5px] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -168,7 +168,7 @@ export default function About() {
           <ScrollReveal direction="scale" className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-8 sm:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
-                <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                <h2 className="font-display text-2xl sm:text-3xl font-medium tracking-[-0.03em] text-white">
                   Clean Material &amp; Honest Measurement
                 </h2>
 
@@ -199,14 +199,14 @@ export default function About() {
               <div className="lg:col-span-4 flex flex-col gap-3">
                 <a
                   href={`tel:+91${COMPANY_INFO.phone1}`}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-sm transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-medium tracking-[-0.01em] tabular-nums text-sm transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call {COMPANY_INFO.phone1Display}</span>
                 </a>
                 <Link
                   to="/services"
-                  className="w-full text-center py-3 px-6 rounded-lg bg-[#121418] hover:bg-zinc-800 border border-zinc-700 text-white font-medium text-sm transition-colors"
+                  className="w-full text-center py-3 px-6 rounded-lg bg-[#121418] hover:bg-zinc-800 border border-zinc-700 text-white font-medium tracking-[-0.01em] text-sm transition-colors"
                 >
                   View Materials &amp; Uses
                 </Link>

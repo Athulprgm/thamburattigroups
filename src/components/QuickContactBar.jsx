@@ -9,13 +9,13 @@ export default function QuickContactBar() {
     <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2">
       {isExpanded && (
         <div className="bg-[#121418] border border-zinc-700 rounded-xl p-3 shadow-xl flex flex-col gap-2 min-w-[220px]">
-          <div className="text-xs font-semibold text-zinc-400 px-1">
+          <div className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-zinc-400 px-1">
             Contact Thamburatti Group
           </div>
 
           <a
             href={`tel:+91${COMPANY_INFO.phone1}`}
-            className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-100 text-xs font-medium transition-colors"
+            className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-100 font-mono text-xs font-medium tabular-nums transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-amber-500" />
             <span>{COMPANY_INFO.phone1Display}</span>
@@ -23,7 +23,7 @@ export default function QuickContactBar() {
 
           <a
             href={`tel:+91${COMPANY_INFO.phone2}`}
-            className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-100 text-xs font-medium transition-colors"
+            className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-100 font-mono text-xs font-medium tabular-nums transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-amber-500" />
             <span>{COMPANY_INFO.phone2Display}</span>
@@ -35,7 +35,7 @@ export default function QuickContactBar() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors"
+            className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium tracking-[-0.01em] tabular-nums transition-colors"
           >
             <MessageSquare className="w-3.5 h-3.5" />
             <span>WhatsApp {COMPANY_INFO.whatsappDisplay}</span>
@@ -46,7 +46,7 @@ export default function QuickContactBar() {
       <button
         type="button"
         onClick={() => setIsExpanded(!isExpanded)}
-        className="h-12 px-4 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition-colors focus:outline-none"
+        className="h-11 px-4 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-medium tracking-[-0.01em] text-xs sm:text-[13px] flex items-center gap-2 shadow-lg transition-colors focus:outline-none"
         aria-label="Quick Contact Options"
       >
         {isExpanded ? (

@@ -12,10 +12,10 @@ export default function Services() {
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
         <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
             Materials &amp; Tipper Transport
           </p>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mt-2">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.036em] text-white mt-2">
             Construction Materials We Supply
           </h1>
           <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
@@ -39,10 +39,10 @@ export default function Services() {
       <section className="py-20 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
               Material Guide
             </p>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2">
               Where Each Material Is Used
             </h2>
           </ScrollReveal>
@@ -53,10 +53,10 @@ export default function Services() {
                 <div className="bg-[#0B0C0E] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 sm:p-8 space-y-4 h-full transition-colors">
                   <div className="flex items-start justify-between border-b border-zinc-800 pb-4 gap-4">
                     <div>
-                      <span className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500 block">
+                      <span className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-amber-500 block">
                         {item.code}
                       </span>
-                      <h3 className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-white mt-1">
+                      <h3 className="font-display text-xl sm:text-2xl font-medium tracking-[-0.028em] text-white mt-1">
                         {item.fullName}
                       </h3>
                     </div>
@@ -66,7 +66,7 @@ export default function Services() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 rounded-lg bg-zinc-900 hover:bg-emerald-600 border border-zinc-700 hover:border-emerald-500 text-emerald-400 hover:text-white text-xs font-semibold inline-flex items-center gap-1.5 shrink-0 transition-colors"
+                      className="px-3 py-2 rounded-lg bg-zinc-900 hover:bg-emerald-600 border border-zinc-700 hover:border-emerald-500 text-emerald-400 hover:text-white text-xs font-medium tracking-[-0.01em] inline-flex items-center gap-1.5 shrink-0 transition-colors"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       <span>WhatsApp</span>
@@ -81,7 +81,7 @@ export default function Services() {
                     {item.detailedFeatures.map((feat, fidx) => (
                       <li
                         key={fidx}
-                        className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-300"
+                        className="flex items-start gap-2.5 text-xs sm:text-[13.5px] text-zinc-300"
                       >
                         <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                         <span>{feat}</span>
@@ -102,10 +102,10 @@ export default function Services() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <ScrollReveal direction="left" className="lg:col-span-7 space-y-5">
                 <div>
-                  <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
                     Tipper Service
                   </p>
-                  <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2 leading-tight">
+                  <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2 leading-tight">
                     Eicher Tipper Transport &amp; Site Unloading
                   </h2>
                 </div>
@@ -116,19 +116,19 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                   <div className="p-4 rounded-lg bg-[#0B0C0E] border border-zinc-800 space-y-1">
-                    <span className="text-sm font-semibold text-amber-500 block">
+                    <span className="font-display text-sm font-medium tracking-[-0.02em] text-amber-500 block">
                       Direct Site Tipping
                     </span>
-                    <p className="text-xs text-zinc-400">
+                    <p className="text-xs text-zinc-400 leading-relaxed">
                       Hydraulic tipping right where your masons need the pile unloaded.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-lg bg-[#0B0C0E] border border-zinc-800 space-y-1">
-                    <span className="text-sm font-semibold text-amber-500 block">
+                    <span className="font-display text-sm font-medium tracking-[-0.02em] text-amber-500 block">
                       Scheduled Concrete Pour Trips
                     </span>
-                    <p className="text-xs text-zinc-400">
+                    <p className="text-xs text-zinc-400 leading-relaxed">
                       Book ahead for slab casting days so sand and metal arrive on time.
                     </p>
                   </div>
@@ -137,14 +137,14 @@ export default function Services() {
                 <div className="pt-2 flex flex-wrap gap-3">
                   <a
                     href={`tel:+91${COMPANY_INFO.phone1}`}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-xs sm:text-sm transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-medium tracking-[-0.01em] tabular-nums text-xs sm:text-[13px] transition-colors"
                   >
                     <Phone className="w-4 h-4" />
                     <span>Call {COMPANY_INFO.phone1Display}</span>
                   </a>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0B0C0E] hover:bg-zinc-900 border border-zinc-700 text-white font-medium text-xs sm:text-sm transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0B0C0E] hover:bg-zinc-900 border border-zinc-700 text-white font-medium tracking-[-0.01em] text-xs sm:text-[13px] transition-colors"
                   >
                     <span>Send Enquiry</span>
                     <ArrowRight className="w-4 h-4" />
@@ -170,10 +170,10 @@ export default function Services() {
       <section className="py-20 bg-[#121418]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <ScrollReveal>
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
               FAQ
             </p>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white mt-2">
+            <h2 className="font-display text-2xl sm:text-3xl font-medium tracking-[-0.03em] text-white mt-2">
               Common Questions
             </h2>
           </ScrollReveal>
@@ -181,10 +181,10 @@ export default function Services() {
           <StaggerContainer className="space-y-4">
             <StaggerItem>
               <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
-                <h4 className="text-base font-semibold text-white">
+                <h4 className="font-display text-base font-medium tracking-[-0.02em] text-white">
                   What is the difference between M-Sand and P-Sand?
                 </h4>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-[13.5px] leading-relaxed">
                   M-Sand (Manufactured Sand) has slightly coarser, angular grains meant for concrete work (slabs, beams, columns) and block work. P-Sand (Plastering Sand) is finely screened so masons get a smooth finish on walls and ceilings.
                 </p>
               </div>
@@ -192,21 +192,21 @@ export default function Services() {
 
             <StaggerItem>
               <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
-                <h4 className="text-base font-semibold text-white">
+                <h4 className="font-display text-base font-medium tracking-[-0.02em] text-white">
                   How do I check current load rates?
                 </h4>
-                <p className="text-zinc-400 text-sm leading-relaxed">
-                  Call us at {COMPANY_INFO.phone1Display} or {COMPANY_INFO.phone2Display}, or send a message on WhatsApp ({COMPANY_INFO.whatsappDisplay}) with your delivery location and material needed. Rates depend on the material and distance from the crusher to your site.
+                <p className="text-zinc-400 text-[13.5px] leading-relaxed">
+                  Call us at <span className="font-mono text-zinc-200">{COMPANY_INFO.phone1Display}</span> or <span className="font-mono text-zinc-200">{COMPANY_INFO.phone2Display}</span>, or send a message on WhatsApp (<span className="font-mono text-zinc-200">{COMPANY_INFO.whatsappDisplay}</span>) with your delivery location and material needed. Rates depend on the material and distance from the crusher to your site.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
               <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
-                <h4 className="text-base font-semibold text-white">
+                <h4 className="font-display text-base font-medium tracking-[-0.02em] text-white">
                   Which areas do you deliver to?
                 </h4>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-[13.5px] leading-relaxed">
                   We deliver across Kanhangad, Nileshwar, Bekal, Kasaragod town, Cheruvathur, Uduma, Pallikkara, Kotikulam, and nearby panchayats.
                 </p>
               </div>

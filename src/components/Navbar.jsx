@@ -55,10 +55,10 @@ export default function Navbar() {
               className="h-8 sm:h-9 w-auto object-contain shrink-0"
             />
             <div>
-              <span className="block font-display text-base sm:text-[17px] font-medium tracking-[-0.025em] text-white leading-none">
+              <span className="block font-display text-base sm:text-[17px] font-semibold tracking-[-0.03em] text-white leading-none">
                 Thamburatti <span className="text-amber-500">Group</span>
               </span>
-              <span className="block font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-400 mt-1 leading-none">
+              <span className="block font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400 mt-1.5 leading-none">
                 Tipper Transport • Kanhangad
               </span>
             </div>
@@ -72,10 +72,10 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-xs lg:text-sm font-medium transition-colors py-1 border-b-2 ${
+                  className={`text-[13px] lg:text-sm tracking-[-0.01em] transition-colors py-1 border-b-2 ${
                     isActive
-                      ? 'text-amber-400 border-amber-500 font-semibold'
-                      : 'text-zinc-300 hover:text-white border-transparent'
+                      ? 'text-amber-400 border-amber-500 font-medium'
+                      : 'text-zinc-300 hover:text-white border-transparent font-normal'
                   }`}
                 >
                   {link.name}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-2.5">
             <a
               href={`tel:+91${COMPANY_INFO.phone1}`}
-              className="inline-flex items-center gap-1.5 text-xs lg:text-sm font-medium text-zinc-200 hover:text-amber-400 px-2.5 py-1.5 transition-colors"
+              className="inline-flex items-center gap-1.5 font-mono text-xs lg:text-[13px] font-medium tabular-nums text-zinc-200 hover:text-amber-400 px-2.5 py-1.5 transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-amber-500" />
               <span>{COMPANY_INFO.phone1Display}</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-3.5 py-2 rounded-lg text-xs lg:text-sm font-semibold bg-amber-500 hover:bg-amber-400 text-zinc-950 transition-colors"
+              className="inline-flex items-center justify-center px-3.5 py-2 rounded-lg text-xs lg:text-[13px] font-medium tracking-[-0.01em] bg-amber-500 hover:bg-amber-400 text-zinc-950 transition-colors"
             >
               Book a Load
             </Link>

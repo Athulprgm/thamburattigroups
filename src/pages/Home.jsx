@@ -64,7 +64,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-mono text-amber-500 text-[11px] font-normal uppercase tracking-[0.18em]"
+              className="font-mono text-amber-500 text-[11px] font-medium uppercase tracking-[0.18em]"
             >
               Kanhangad • Kasaragod
             </motion.p>
@@ -73,7 +73,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.18 }}
-              className="font-display text-4xl sm:text-5xl lg:text-[3.35rem] font-medium tracking-[-0.035em] text-white leading-[1.08]"
+              className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] font-medium tracking-[-0.038em] text-white leading-[1.06]"
             >
               Building Materials &amp;{' '}
               <span className="text-amber-500">Tipper Service</span>
@@ -83,7 +83,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.26 }}
-              className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed"
+              className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed max-w-md"
             >
               M-Sand, P-Sand, Crushed Metal &amp; Stone Dust delivered directly to your site.
             </motion.p>
@@ -96,7 +96,7 @@ export default function Home() {
             >
               <a
                 href={`tel:+91${COMPANY_INFO.phone1}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-medium tracking-[-0.01em] text-sm tabular-nums transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call {COMPANY_INFO.phone1Display}</span>
@@ -108,7 +108,7 @@ export default function Home() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 text-white font-medium text-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 text-white font-medium tracking-[-0.01em] text-sm tabular-nums transition-colors"
               >
                 <MessageSquare className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp {COMPANY_INFO.whatsappDisplay}</span>
@@ -136,10 +136,10 @@ export default function Home() {
 
             <ScrollReveal direction="right" delay={0.1} className="lg:col-span-7 space-y-6">
               <div>
-                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
                   About Thamburatti Group
                 </p>
-                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2 leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2 leading-tight">
                   Dependable Tipper Transport &amp; Crusher Materials in Kasaragod
                 </h2>
               </div>
@@ -152,18 +152,18 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="bg-[#121418] border border-zinc-800 rounded-lg p-4">
-                  <h3 className="text-sm font-semibold text-white">
+                  <h3 className="font-display text-sm font-medium tracking-[-0.02em] text-white">
                     Company-Owned Eicher Tippers
                   </h3>
-                  <p className="text-xs text-zinc-400 mt-1">
+                  <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
                     Well-maintained heavy tipper trucks suitable for both highway hauling and narrow residential site roads.
                   </p>
                 </div>
                 <div className="bg-[#121418] border border-zinc-800 rounded-lg p-4">
-                  <h3 className="text-sm font-semibold text-white">
+                  <h3 className="font-display text-sm font-medium tracking-[-0.02em] text-white">
                     Direct Quarry Loading
                   </h3>
-                  <p className="text-xs text-zinc-400 mt-1">
+                  <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
                     Materials are loaded straight from regional crushers with no middleman markup or unnecessary delays.
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export default function Home() {
               <div className="pt-1">
                 <Link
                   to="/about"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium tracking-[-0.01em] text-amber-500 hover:text-amber-400 transition-colors"
                 >
                   <span>Read more about our business</span>
                   <ArrowRight className="w-4 h-4" />
@@ -188,10 +188,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+              <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
                 What We Supply
               </p>
-              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2">
                 Construction Materials
               </h2>
             </div>
@@ -211,7 +211,7 @@ export default function Home() {
               Need multiple loads or regular site supply?{' '}
               <Link
                 to="/contact"
-                className="text-amber-500 hover:text-amber-400 font-semibold underline underline-offset-4"
+                className="text-amber-500 hover:text-amber-400 font-medium underline underline-offset-4"
               >
                 Call or message us for rates
               </Link>
@@ -224,10 +224,10 @@ export default function Home() {
       <section className="py-20 lg:py-24 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
               Why Work With Us
             </p>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2">
               Straightforward Service You Can Count On
             </h2>
           </ScrollReveal>
@@ -243,15 +243,15 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <span className="text-xs text-zinc-400 block">
+                      <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-amber-500/90 block">
                         {item.subtitle}
                       </span>
-                      <h3 className="text-base font-semibold text-white mt-0.5">
+                      <h3 className="font-display text-base font-medium tracking-[-0.02em] text-white mt-1">
                         {item.title}
                       </h3>
                     </div>
 
-                    <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-zinc-400 text-xs sm:text-[13.5px] leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -266,10 +266,10 @@ export default function Home() {
       <section className="py-20 lg:py-24 bg-[#0B0C0E] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
               Ordering Process
             </p>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2">
               How We Deliver to Your Site
             </h2>
           </ScrollReveal>
@@ -278,15 +278,15 @@ export default function Home() {
             {WORKING_PROCESS.map((proc) => (
               <StaggerItem key={proc.step}>
                 <div className="bg-[#121418] border border-zinc-800 hover:border-zinc-700 p-6 rounded-xl space-y-3 h-full transition-colors">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500 text-zinc-950 font-mono font-semibold text-sm">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500 text-zinc-950 font-mono font-medium text-xs tabular-nums">
                     {proc.step}
                   </span>
 
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-white">
+                  <h3 className="font-display text-lg font-medium tracking-[-0.025em] text-white">
                     {proc.title}
                   </h3>
 
-                  <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-zinc-400 text-xs sm:text-[13.5px] leading-relaxed">
                     {proc.description}
                   </p>
                 </div>
@@ -302,10 +302,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <ScrollReveal direction="left" className="lg:col-span-6 space-y-6">
               <div>
-                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
                   Service Areas
                 </p>
-                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white mt-2 leading-tight">
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white mt-2 leading-tight">
                   Based in Kanhangad, Delivering Across Kasaragod
                 </h2>
               </div>
@@ -315,14 +315,14 @@ export default function Home() {
               </p>
 
               <div className="space-y-2.5">
-                <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400 block">
+                <span className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-zinc-400 block">
                   Regular Delivery Areas:
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {REGIONAL_COVERAGE.map((area) => (
                     <span
                       key={area}
-                      className="px-3 py-1.5 rounded-lg bg-[#0B0C0E] border border-zinc-800 text-xs font-medium text-zinc-200"
+                      className="px-3 py-1.5 rounded-lg bg-[#0B0C0E] border border-zinc-800 text-xs font-normal text-zinc-200"
                     >
                       {area}
                     </span>
@@ -333,14 +333,14 @@ export default function Home() {
               <div className="pt-2 flex flex-wrap gap-3">
                 <a
                   href={`tel:+91${COMPANY_INFO.phone1}`}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-xs sm:text-sm transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-mono font-medium tabular-nums text-xs sm:text-[13px] transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>{COMPANY_INFO.phone1Display}</span>
                 </a>
                 <a
                   href={`tel:+91${COMPANY_INFO.phone2}`}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0B0C0E] hover:bg-zinc-900 border border-zinc-700 text-white font-medium text-xs sm:text-sm transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0B0C0E] hover:bg-zinc-900 border border-zinc-700 text-white font-mono font-medium tabular-nums text-xs sm:text-[13px] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-amber-500" />
                   <span>{COMPANY_INFO.phone2Display}</span>
@@ -370,7 +370,7 @@ export default function Home() {
       {/* BOTTOM CALL TO ACTION */}
       <section className="py-20 bg-[#0B0C0E]">
         <ScrollReveal direction="scale" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium tracking-[-0.032em] text-white">
             Need M-Sand, P-Sand, Metal, or Stone Dust?
           </h2>
 
@@ -381,7 +381,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <a
               href={`tel:+91${COMPANY_INFO.phone1}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-semibold text-sm transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-medium tracking-[-0.01em] tabular-nums text-sm transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span>Call {COMPANY_INFO.phone1Display}</span>
@@ -393,7 +393,7 @@ export default function Home() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#121418] hover:bg-zinc-800 border border-zinc-700 text-white font-medium text-sm transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#121418] hover:bg-zinc-800 border border-zinc-700 text-white font-medium tracking-[-0.01em] tabular-nums text-sm transition-colors"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
               <span>WhatsApp {COMPANY_INFO.whatsappDisplay}</span>
@@ -404,7 +404,7 @@ export default function Home() {
             Second Number:{' '}
             <a
               href={`tel:+91${COMPANY_INFO.phone2}`}
-              className="text-zinc-200 hover:text-amber-400 underline underline-offset-2"
+              className="font-mono tabular-nums text-zinc-200 hover:text-amber-400 underline underline-offset-2"
             >
               {COMPANY_INFO.phone2Display}
             </a>{' '}
@@ -413,7 +413,7 @@ export default function Home() {
               href={COMPANY_INFO.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-amber-500 hover:text-amber-400 underline underline-offset-2"
+              className="font-mono text-amber-500 hover:text-amber-400 underline underline-offset-2"
             >
               {COMPANY_INFO.instagramHandle}
             </a>

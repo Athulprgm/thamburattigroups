@@ -135,10 +135,10 @@ export default function Contact() {
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
         <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-amber-500">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-amber-500">
             Contact Us
           </p>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mt-2">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.036em] text-white mt-2">
             Book a Load or Check Today&apos;s Rates
           </h1>
           <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
@@ -154,7 +154,7 @@ export default function Contact() {
             {/* Left Column: Direct Contact Info */}
             <StaggerContainer className="lg:col-span-5 space-y-4">
               <StaggerItem>
-                <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                <h2 className="font-display text-2xl sm:text-3xl font-medium tracking-[-0.03em] text-white">
                   Direct Phone &amp; WhatsApp
                 </h2>
                 <p className="text-zinc-400 text-sm mt-1">
@@ -171,12 +171,12 @@ export default function Contact() {
                         <Phone className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-xs text-zinc-400 block">
+                        <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-zinc-400 block">
                           Primary Number
                         </span>
                         <a
                           href={`tel:+91${COMPANY_INFO.phone1}`}
-                          className="block text-lg font-semibold text-white hover:text-amber-400 transition-colors mt-0.5"
+                          className="block font-mono text-lg font-medium tabular-nums text-white hover:text-amber-400 transition-colors mt-0.5"
                         >
                           {COMPANY_INFO.phone1Display}
                         </a>
@@ -211,12 +211,12 @@ export default function Contact() {
                         <Phone className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-xs text-zinc-400 block">
+                        <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-zinc-400 block">
                           Alternate Number
                         </span>
                         <a
                           href={`tel:+91${COMPANY_INFO.phone2}`}
-                          className="block text-lg font-semibold text-white hover:text-amber-400 transition-colors mt-0.5"
+                          className="block font-mono text-lg font-medium tabular-nums text-white hover:text-amber-400 transition-colors mt-0.5"
                         >
                           {COMPANY_INFO.phone2Display}
                         </a>
@@ -251,7 +251,7 @@ export default function Contact() {
                         <MessageSquare className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-xs text-emerald-400 block">
+                        <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-emerald-400 block">
                           WhatsApp Number
                         </span>
                         <a
@@ -260,7 +260,7 @@ export default function Contact() {
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block text-lg font-semibold text-white hover:text-emerald-400 transition-colors mt-0.5"
+                          className="block font-mono text-lg font-medium tabular-nums text-white hover:text-emerald-400 transition-colors mt-0.5"
                         >
                           {COMPANY_INFO.whatsappDisplay}
                         </a>
@@ -276,7 +276,7 @@ export default function Contact() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors shrink-0"
+                      className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium tracking-[-0.01em] transition-colors shrink-0"
                     >
                       Open Chat
                     </a>
@@ -292,10 +292,10 @@ export default function Contact() {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-zinc-400 block">
+                      <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-zinc-400 block">
                         Location
                       </span>
-                      <h4 className="text-sm font-semibold text-white mt-0.5">
+                      <h4 className="font-display text-sm font-medium tracking-[-0.02em] text-white mt-0.5">
                         {COMPANY_INFO.location}
                       </h4>
                       <p className="text-xs text-zinc-400 mt-1">
@@ -315,10 +315,10 @@ export default function Contact() {
                         <InstagramIcon className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-xs text-zinc-400 block">
+                        <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-zinc-400 block">
                           Instagram
                         </span>
-                        <h4 className="text-sm font-semibold text-white">
+                        <h4 className="font-mono text-sm font-medium text-white mt-0.5">
                           {COMPANY_INFO.instagramHandle}
                         </h4>
                       </div>
@@ -342,7 +342,7 @@ export default function Contact() {
             <ScrollReveal direction="right" delay={0.1} className="lg:col-span-7">
               <div className="bg-[#121418] border border-zinc-800 rounded-xl p-6 sm:p-8 space-y-6">
                 <div>
-                  <h3 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                  <h3 className="font-display text-2xl sm:text-3xl font-medium tracking-[-0.03em] text-white">
                     Send an Enquiry
                   </h3>
                   <p className="text-zinc-400 text-xs sm:text-sm mt-1">
@@ -515,11 +515,11 @@ export default function Contact() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <StaggerItem>
               <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2 h-full">
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="font-display text-base font-medium tracking-[-0.02em] text-white">
                   Working Hours
                 </h3>
-                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                  Monday to Saturday: 6:00 AM – 8:00 PM <br />
+                <p className="text-zinc-400 text-xs sm:text-[13.5px] leading-relaxed">
+                  Monday to Saturday: <span className="font-mono text-zinc-200">6:00 AM – 8:00 PM</span> <br />
                   Sunday: Available for pre-booked concrete work.
                 </p>
               </div>
@@ -527,10 +527,10 @@ export default function Contact() {
 
             <StaggerItem>
               <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2 h-full">
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="font-display text-base font-medium tracking-[-0.02em] text-white">
                   Delivery Areas
                 </h3>
-                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                <p className="text-zinc-400 text-xs sm:text-[13.5px] leading-relaxed">
                   Kanhangad, Kasaragod, Bekal, Nileshwar, Cheruvathur, Uduma, Pallikkara, Kotikulam, and nearby areas.
                 </p>
               </div>
@@ -538,14 +538,14 @@ export default function Contact() {
 
             <StaggerItem>
               <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2 h-full">
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="font-display text-base font-medium tracking-[-0.02em] text-white">
                   Urgent Site Delivery
                 </h3>
-                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                <p className="text-zinc-400 text-xs sm:text-[13.5px] leading-relaxed">
                   For urgent concrete pours or same-day loads, please call directly on{' '}
                   <a
                     href={`tel:+91${COMPANY_INFO.phone1}`}
-                    className="text-amber-500 hover:text-amber-400 font-semibold"
+                    className="font-mono tabular-nums text-amber-500 hover:text-amber-400 font-medium"
                   >
                     {COMPANY_INFO.phone1Display}
                   </a>

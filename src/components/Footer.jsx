@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-300">
               Pages
             </h4>
             <ul className="space-y-2 text-sm">
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Column 3: Materials */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-300">
               Materials Supplied
             </h4>
             <ul className="space-y-2 text-sm">
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h4 className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-300">
               Contact &amp; Booking
             </h4>
             <div className="space-y-3 text-sm text-zinc-400">
@@ -104,7 +104,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-amber-500 shrink-0" />
                 <a
                   href={`tel:+91${COMPANY_INFO.phone1}`}
-                  className="text-zinc-200 hover:text-amber-400 font-medium transition-colors"
+                  className="font-mono text-[13px] tabular-nums text-zinc-200 hover:text-amber-400 font-medium transition-colors"
                 >
                   {COMPANY_INFO.phone1Display}
                 </a>
@@ -113,7 +113,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-amber-500 shrink-0" />
                 <a
                   href={`tel:+91${COMPANY_INFO.phone2}`}
-                  className="text-zinc-200 hover:text-amber-400 font-medium transition-colors"
+                  className="font-mono text-[13px] tabular-nums text-zinc-200 hover:text-amber-400 font-medium transition-colors"
                 >
                   {COMPANY_INFO.phone2Display}
                 </a>
@@ -126,7 +126,7 @@ export default function Footer() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-200 hover:text-emerald-400 font-medium transition-colors"
+                  className="font-mono text-[13px] tabular-nums text-zinc-200 hover:text-emerald-400 font-medium transition-colors"
                 >
                   {COMPANY_INFO.whatsappDisplay} (WhatsApp)
                 </a>
