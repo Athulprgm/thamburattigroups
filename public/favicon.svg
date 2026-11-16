@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Dark Obsidian Base with Rounded Corners -->
+  <rect width="64" height="64" rx="14" fill="#090A0D"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Speed Lines / Ground -->
+  <path d="M7 47H57" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Raised Tipper Bed (Orange with Slanted Stripes) -->
+  <path d="M12 37.5L34 19L36.5 21.5L33.5 37.5L12 37.5Z" fill="#F97316"/>
+  <path d="M34 19L38.5 20L34 29L31 29L34 19Z" fill="#EA580C"/>
+  <!-- Tipper Stripes -->
+  <line x1="17" y1="36" x2="20" y2="29" stroke="#090A0D" stroke-width="2" stroke-linecap="round"/>
+  <line x1="22" y1="36" x2="25" y2="26" stroke="#090A0D" stroke-width="2" stroke-linecap="round"/>
+  <line x1="27" y1="36" x2="30" y2="23" stroke="#090A0D" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Tipper Lift Hydraulic Ram -->
+  <line x1="30" y1="37.5" x2="33" y2="30" stroke="#71717A" stroke-width="2"/>
+
+  <!-- Truck Cab (White Body with Black Window and Grille) -->
+  <path d="M34 43V27.5L44 28.5L48 34L49 43H34Z" fill="#FFFFFF"/>
+  <!-- Windshield -->
+  <path d="M39 29.5L43.5 30.5L46.5 35H39V29.5Z" fill="#090A0D"/>
+  <!-- Front Bumper / Grille -->
+  <path d="M44 38H49V43H44V38Z" fill="#18181B"/>
+  <circle cx="47" cy="41" r="1" fill="#F59E0B"/>
+
+  <!-- Chassis & Wheels -->
+  <path d="M13 43H50V45H13V43Z" fill="#27272A"/>
+
+  <!-- Wheels -->
+  <!-- Rear Wheels -->
+  <circle cx="18" cy="45" r="4.5" fill="#18181B" stroke="#F4F4F5" stroke-width="1"/>
+  <circle cx="18" cy="45" r="1.5" fill="#71717A"/>
+  
+  <circle cx="27" cy="45" r="4.5" fill="#18181B" stroke="#F4F4F5" stroke-width="1"/>
+  <circle cx="27" cy="45" r="1.5" fill="#71717A"/>
+
+  <!-- Front Wheel -->
+  <circle cx="42" cy="45" r="4.5" fill="#18181B" stroke="#F4F4F5" stroke-width="1"/>
+  <circle cx="42" cy="45" r="1.5" fill="#71717A"/>
+</svg>
