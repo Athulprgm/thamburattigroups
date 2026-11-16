@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Truck, Layers, MapPin, Check, Phone } from 'lucide-react';
 import heroQuarryImg from '../assets/images/hero-truck.jpg';
+import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal';
 import { COMPANY_INFO, WHY_CHOOSE_US } from '../data/companyData';
 
 export default function About() {
@@ -9,7 +10,7 @@ export default function About() {
     <div className="bg-[#0B0C0E] text-zinc-100">
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
             About Us
           </p>
@@ -19,14 +20,14 @@ export default function About() {
           <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3">
             Local Eicher tipper transport and building material suppliers serving homeowners, masons, and contractors across Kasaragod district.
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* COMPANY OVERVIEW */}
-      <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800">
+      <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-5">
+            <ScrollReveal direction="left" className="lg:col-span-7 space-y-5">
               <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white">
                 Reliable Material Supply for Every Stage of Construction
               </h2>
@@ -48,9 +49,9 @@ export default function About() {
                   M-Sand • P-Sand • Metal • Stone Dust
                 </span>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="lg:col-span-5">
+            <ScrollReveal direction="right" delay={0.1} className="lg:col-span-5">
               <div className="rounded-xl overflow-hidden border border-zinc-800 bg-[#121418]">
                 <img
                   src={heroQuarryImg}
@@ -66,7 +67,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -74,92 +75,97 @@ export default function About() {
       {/* WHAT WE DO */}
       <section className="py-20 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <ScrollReveal className="mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
               Our Operations
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
               What We Do
             </h2>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-6 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
-                <Truck className="w-5 h-5" />
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <StaggerItem>
+              <div className="bg-[#0B0C0E] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 space-y-3 h-full transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">
+                  Eicher Tipper Transport
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  We run heavy-duty Eicher tippers built to carry sand, metal, and quarry dust safely over main roads as well as narrow village and residential plot access roads.
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-white">
-                Eicher Tipper Transport
-              </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                We run heavy-duty Eicher tippers built to carry sand, metal, and quarry dust safely over main roads as well as narrow village and residential plot access roads.
-              </p>
-            </div>
+            </StaggerItem>
 
-            <div className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-6 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
-                <Layers className="w-5 h-5" />
+            <StaggerItem>
+              <div className="bg-[#0B0C0E] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 space-y-3 h-full transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
+                  <Layers className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">
+                  Direct Crusher Sourcing
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  Whether you need washed M-Sand for concrete, fine P-Sand for plastering, 20mm/40mm blue granite metal, or stone dust, we load directly from trusted regional crushers.
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-white">
-                Direct Crusher Sourcing
-              </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Whether you need washed M-Sand for concrete, fine P-Sand for plastering, 20mm/40mm blue granite metal, or stone dust, we load directly from trusted regional crushers.
-              </p>
-            </div>
+            </StaggerItem>
 
-            <div className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-6 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
-                <MapPin className="w-5 h-5" />
+            <StaggerItem>
+              <div className="bg-[#0B0C0E] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 space-y-3 h-full transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">
+                  Local Kasaragod Service
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  Based in Kanhangad, we know the local routes and site conditions across Kasaragod district and work closely with local builders, masons, and house owners.
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-white">
-                Local Kasaragod Service
-              </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Based in Kanhangad, we know the local routes and site conditions across Kasaragod district and work closely with local builders, masons, and house owners.
-              </p>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* WHY CHOOSE US */}
       <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <ScrollReveal className="mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
               Our Standards
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
               Why Builders &amp; Homeowners Trust Us
             </h2>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {WHY_CHOOSE_US.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-[#121418] border border-zinc-800 p-6 rounded-xl space-y-2.5"
-              >
-                <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
-                  {item.subtitle}
-                </span>
-                <h3 className="text-base font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+              <StaggerItem key={idx}>
+                <div className="bg-[#121418] border border-zinc-800 hover:border-zinc-700 p-6 rounded-xl space-y-2.5 h-full transition-colors">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
+                    {item.subtitle}
+                  </span>
+                  <h3 className="text-base font-semibold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* QUALITY & CONTACT */}
       <section className="py-20 bg-[#121418]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-8 sm:p-10">
+          <ScrollReveal direction="scale" className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-8 sm:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
                 <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white">
@@ -206,7 +212,7 @@ export default function About() {
                 </Link>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>

@@ -30,7 +30,7 @@ export default function QuickContactBar() {
           </a>
 
           <a
-            href={`https://wa.me/91${COMPANY_INFO.phone1}?text=${encodeURIComponent(
+            href={`https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
               'Hello Thamburatti Group, I would like to enquire about construction materials.'
             )}`}
             target="_blank"
@@ -38,7 +38,7 @@ export default function QuickContactBar() {
             className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors"
           >
             <MessageSquare className="w-3.5 h-3.5" />
-            <span>Message on WhatsApp</span>
+            <span>WhatsApp {COMPANY_INFO.whatsappDisplay}</span>
           </a>
         </div>
       )}

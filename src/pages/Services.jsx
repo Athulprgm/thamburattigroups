@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageSquare, Phone, Check, ArrowRight } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
+import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal';
 import siteBuildImg from '../assets/images/image.png';
 import { COMPANY_INFO, SERVICES_DATA } from '../data/companyData';
 
@@ -10,7 +11,7 @@ export default function Services() {
     <div className="bg-[#0B0C0E] text-zinc-100">
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
             Materials &amp; Tipper Transport
           </p>
@@ -20,7 +21,7 @@ export default function Services() {
           <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3">
             Direct crusher-to-site delivery of M-Sand, P-Sand, 20mm &amp; 40mm granite metal, and stone dust across Kanhangad, Kasaragod, and nearby areas.
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* FOUR MAIN SERVICE CARDS */}
@@ -37,70 +38,69 @@ export default function Services() {
       {/* MATERIAL DETAILS & USES */}
       <section className="py-20 bg-[#121418] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <ScrollReveal className="mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
               Material Guide
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mt-1">
               Where Each Material Is Used
             </h2>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {SERVICES_DATA.map((item) => (
-              <div
-                key={item.id}
-                className="bg-[#0B0C0E] border border-zinc-800 rounded-xl p-6 sm:p-8 space-y-4"
-              >
-                <div className="flex items-start justify-between border-b border-zinc-800 pb-4 gap-4">
-                  <div>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
-                      {item.code}
-                    </span>
-                    <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white mt-0.5">
-                      {item.fullName}
-                    </h3>
-                  </div>
-                  <a
-                    href={`https://wa.me/91${COMPANY_INFO.phone1}?text=${encodeURIComponent(
-                      item.whatsappMessage
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-2 rounded-lg bg-zinc-900 hover:bg-emerald-600 border border-zinc-700 hover:border-emerald-500 text-emerald-400 hover:text-white text-xs font-semibold inline-flex items-center gap-1.5 shrink-0 transition-colors"
-                  >
-                    <MessageSquare className="w-3.5 h-3.5" />
-                    <span>WhatsApp</span>
-                  </a>
-                </div>
-
-                <p className="text-zinc-300 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-
-                <ul className="space-y-2 pt-1">
-                  {item.detailedFeatures.map((feat, fidx) => (
-                    <li
-                      key={fidx}
-                      className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-300"
+              <StaggerItem key={item.id}>
+                <div className="bg-[#0B0C0E] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 sm:p-8 space-y-4 h-full transition-colors">
+                  <div className="flex items-start justify-between border-b border-zinc-800 pb-4 gap-4">
+                    <div>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
+                        {item.code}
+                      </span>
+                      <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-white mt-0.5">
+                        {item.fullName}
+                      </h3>
+                    </div>
+                    <a
+                      href={`https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
+                        item.whatsappMessage
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 rounded-lg bg-zinc-900 hover:bg-emerald-600 border border-zinc-700 hover:border-emerald-500 text-emerald-400 hover:text-white text-xs font-semibold inline-flex items-center gap-1.5 shrink-0 transition-colors"
                     >
-                      <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>WhatsApp</span>
+                    </a>
+                  </div>
+
+                  <p className="text-zinc-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  <ul className="space-y-2 pt-1">
+                    {item.detailedFeatures.map((feat, fidx) => (
+                      <li
+                        key={fidx}
+                        className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-300"
+                      >
+                        <Check className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* EICHER TIPPER TRANSPORT SECTION */}
-      <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800">
+      <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#121418] border border-zinc-800 rounded-xl p-6 sm:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-7 space-y-5">
+              <ScrollReveal direction="left" className="lg:col-span-7 space-y-5">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
                     Tipper Service
@@ -150,9 +150,9 @@ export default function Services() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </div>
+              </ScrollReveal>
 
-              <div className="lg:col-span-5">
+              <ScrollReveal direction="right" delay={0.1} className="lg:col-span-5">
                 <div className="rounded-xl overflow-hidden border border-zinc-800 bg-[#0B0C0E]">
                   <img
                     src={siteBuildImg}
@@ -160,7 +160,7 @@ export default function Services() {
                     className="w-full h-[320px] object-cover"
                   />
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -169,43 +169,49 @@ export default function Services() {
       {/* COMMON QUESTIONS */}
       <section className="py-20 bg-[#121418]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div>
+          <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
               FAQ
             </p>
             <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white mt-1">
               Common Questions
             </h2>
-          </div>
+          </ScrollReveal>
 
-          <div className="space-y-4">
-            <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
-              <h4 className="text-base font-semibold text-white">
-                What is the difference between M-Sand and P-Sand?
-              </h4>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                M-Sand (Manufactured Sand) has slightly coarser, angular grains meant for concrete work (slabs, beams, columns) and block work. P-Sand (Plastering Sand) is finely screened so masons get a smooth finish on walls and ceilings.
-              </p>
-            </div>
+          <StaggerContainer className="space-y-4">
+            <StaggerItem>
+              <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
+                <h4 className="text-base font-semibold text-white">
+                  What is the difference between M-Sand and P-Sand?
+                </h4>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  M-Sand (Manufactured Sand) has slightly coarser, angular grains meant for concrete work (slabs, beams, columns) and block work. P-Sand (Plastering Sand) is finely screened so masons get a smooth finish on walls and ceilings.
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
-              <h4 className="text-base font-semibold text-white">
-                How do I check current load rates?
-              </h4>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Call us at {COMPANY_INFO.phone1Display} or {COMPANY_INFO.phone2Display}, or send a message on WhatsApp with your delivery location and material needed. Rates depend on the material and distance from the crusher to your site.
-              </p>
-            </div>
+            <StaggerItem>
+              <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
+                <h4 className="text-base font-semibold text-white">
+                  How do I check current load rates?
+                </h4>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  Call us at {COMPANY_INFO.phone1Display} or {COMPANY_INFO.phone2Display}, or send a message on WhatsApp ({COMPANY_INFO.whatsappDisplay}) with your delivery location and material needed. Rates depend on the material and distance from the crusher to your site.
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
-              <h4 className="text-base font-semibold text-white">
-                Which areas do you deliver to?
-              </h4>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                We deliver across Kanhangad, Nileshwar, Bekal, Kasaragod town, Cheruvathur, Uduma, Pallikkara, Kotikulam, and nearby panchayats.
-              </p>
-            </div>
-          </div>
+            <StaggerItem>
+              <div className="p-6 rounded-xl bg-[#0B0C0E] border border-zinc-800 space-y-2">
+                <h4 className="text-base font-semibold text-white">
+                  Which areas do you deliver to?
+                </h4>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  We deliver across Kanhangad, Nileshwar, Bekal, Kasaragod town, Cheruvathur, Uduma, Pallikkara, Kotikulam, and nearby panchayats.
+                </p>
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
     </div>

@@ -19,6 +19,9 @@ export const COMPANY_INFO = {
   phone2Raw: '9746570681',
   phone1Display: '+91 97319 48054',
   phone2Display: '+91 97465 70681',
+  whatsapp: '9947323810',
+  whatsappRaw: '9947323810',
+  whatsappDisplay: '+91 99473 23810',
   instagramHandle: '@_thamburatti_group_',
   instagramUrl: 'https://www.instagram.com/_thamburatti_group_/',
   aboutText: [

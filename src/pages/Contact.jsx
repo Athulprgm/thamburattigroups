@@ -12,6 +12,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { InstagramIcon } from '../components/Icons';
+import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal';
 import { COMPANY_INFO } from '../data/companyData';
 
 // Deployed Google Apps Script Web App URL
@@ -125,7 +126,7 @@ export default function Contact() {
     setTimeout(() => setCopiedPhone(null), 2500);
   };
 
-  const whatsappGeneratedUrl = `https://wa.me/91${COMPANY_INFO.phone1}?text=${encodeURIComponent(
+  const whatsappGeneratedUrl = `https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
     `Hello Thamburatti Group, my name is ${formData.name || 'a customer'}. Material needed: ${formData.serviceRequired}. Phone: ${formData.phone}. Details: ${formData.message}`
   )}`;
 
@@ -133,7 +134,7 @@ export default function Contact() {
     <div className="bg-[#0B0C0E] text-zinc-100">
       {/* PAGE HEADER */}
       <section className="py-16 sm:py-20 bg-[#121418] border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
             Contact Us
           </p>
@@ -143,180 +144,202 @@ export default function Contact() {
           <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mt-3">
             {COMPANY_INFO.contactSubheading}
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* CONTACT DETAILS & FORM */}
-      <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800">
+      <section className="py-20 bg-[#0B0C0E] border-b border-zinc-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Column: Direct Contact Info */}
-            <div className="lg:col-span-5 space-y-4">
-              <h2 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
-                Direct Phone &amp; WhatsApp
-              </h2>
-              <p className="text-zinc-400 text-sm">
-                For the fastest response, call us directly or send your site location on WhatsApp.
-              </p>
+            <StaggerContainer className="lg:col-span-5 space-y-4">
+              <StaggerItem>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
+                  Direct Phone &amp; WhatsApp
+                </h2>
+                <p className="text-zinc-400 text-sm mt-1">
+                  For the fastest response, call us directly or send your site location on WhatsApp.
+                </p>
+              </StaggerItem>
 
               {/* Primary Phone */}
-              <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
-                      <Phone className="w-4 h-4" />
+              <StaggerItem>
+                <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
+                        <Phone className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="text-xs text-zinc-400 block">
+                          Primary Number
+                        </span>
+                        <a
+                          href={`tel:+91${COMPANY_INFO.phone1}`}
+                          className="block text-lg font-semibold text-white hover:text-amber-400 transition-colors mt-0.5"
+                        >
+                          {COMPANY_INFO.phone1Display}
+                        </a>
+                        <p className="text-xs text-zinc-400 mt-0.5">
+                          Direct call &amp; booking
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-xs text-zinc-400 block">
-                        Primary Number
-                      </span>
-                      <a
-                        href={`tel:+91${COMPANY_INFO.phone1}`}
-                        className="block text-lg font-semibold text-white hover:text-amber-400 transition-colors mt-0.5"
-                      >
-                        {COMPANY_INFO.phone1Display}
-                      </a>
-                      <p className="text-xs text-zinc-400 mt-0.5">
-                        Calls &amp; WhatsApp
-                      </p>
-                    </div>
-                  </div>
 
-                  <button
-                    type="button"
-                    onClick={() => copyToClipboard(COMPANY_INFO.phone1, 'phone1')}
-                    className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white transition-colors"
-                    title="Copy Phone Number"
-                  >
-                    {copiedPhone === 'phone1' ? (
-                      <Check className="w-4 h-4 text-emerald-400" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
-                  </button>
+                    <button
+                      type="button"
+                      onClick={() => copyToClipboard(COMPANY_INFO.phone1, 'phone1')}
+                      className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                      title="Copy Phone Number"
+                    >
+                      {copiedPhone === 'phone1' ? (
+                        <Check className="w-4 h-4 text-emerald-400" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </StaggerItem>
 
               {/* Secondary Phone */}
-              <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
-                <div className="flex items-start justify-between gap-3">
+              <StaggerItem>
+                <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
+                        <Phone className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="text-xs text-zinc-400 block">
+                          Alternate Number
+                        </span>
+                        <a
+                          href={`tel:+91${COMPANY_INFO.phone2}`}
+                          className="block text-lg font-semibold text-white hover:text-amber-400 transition-colors mt-0.5"
+                        >
+                          {COMPANY_INFO.phone2Display}
+                        </a>
+                        <p className="text-xs text-zinc-400 mt-0.5">
+                          Direct tipper / dispatch contact
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => copyToClipboard(COMPANY_INFO.phone2, 'phone2')}
+                      className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                      title="Copy Phone Number"
+                    >
+                      {copiedPhone === 'phone2' ? (
+                        <Check className="w-4 h-4 text-emerald-400" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </StaggerItem>
+
+              {/* WhatsApp Card */}
+              <StaggerItem>
+                <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+                        <MessageSquare className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="text-xs text-emerald-400 block">
+                          WhatsApp Number
+                        </span>
+                        <a
+                          href={`https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
+                            'Hello Thamburatti Group, I would like to enquire about construction materials.'
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-lg font-semibold text-white hover:text-emerald-400 transition-colors mt-0.5"
+                        >
+                          {COMPANY_INFO.whatsappDisplay}
+                        </a>
+                        <p className="text-xs text-zinc-400 mt-0.5">
+                          Message for Rates &amp; Location Pin
+                        </p>
+                      </div>
+                    </div>
+
+                    <a
+                      href={`https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
+                        'Hello Thamburatti Group, I would like to enquire about construction materials.'
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors shrink-0"
+                    >
+                      Open Chat
+                    </a>
+                  </div>
+                </div>
+              </StaggerItem>
+
+              {/* Location Card */}
+              <StaggerItem>
+                <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
                   <div className="flex items-start gap-3.5">
                     <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
-                      <Phone className="w-4 h-4" />
+                      <MapPin className="w-4 h-4" />
                     </div>
                     <div>
                       <span className="text-xs text-zinc-400 block">
-                        Alternate Number
+                        Location
                       </span>
-                      <a
-                        href={`tel:+91${COMPANY_INFO.phone2}`}
-                        className="block text-lg font-semibold text-white hover:text-amber-400 transition-colors mt-0.5"
-                      >
-                        {COMPANY_INFO.phone2Display}
-                      </a>
-                      <p className="text-xs text-zinc-400 mt-0.5">
-                        Direct tipper / dispatch contact
+                      <h4 className="text-sm font-semibold text-white mt-0.5">
+                        {COMPANY_INFO.location}
+                      </h4>
+                      <p className="text-xs text-zinc-400 mt-1">
+                        Delivering across Kanhangad, Nileshwar, Bekal, Kasaragod, and nearby areas.
                       </p>
                     </div>
                   </div>
-
-                  <button
-                    type="button"
-                    onClick={() => copyToClipboard(COMPANY_INFO.phone2, 'phone2')}
-                    className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white transition-colors"
-                    title="Copy Phone Number"
-                  >
-                    {copiedPhone === 'phone2' ? (
-                      <Check className="w-4 h-4 text-emerald-400" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
-                  </button>
                 </div>
-              </div>
-
-              {/* WhatsApp Card */}
-              <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                      <MessageSquare className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-emerald-400 block">
-                        WhatsApp
-                      </span>
-                      <h4 className="text-sm font-semibold text-white">
-                        Message for Rates &amp; Location Pin
-                      </h4>
-                    </div>
-                  </div>
-
-                  <a
-                    href={`https://wa.me/91${COMPANY_INFO.phone1}?text=${encodeURIComponent(
-                      'Hello Thamburatti Group, I would like to enquire about construction materials.'
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors"
-                  >
-                    Open Chat
-                  </a>
-                </div>
-              </div>
-
-              {/* Location Card */}
-              <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
-                <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-zinc-400 block">
-                      Location
-                    </span>
-                    <h4 className="text-sm font-semibold text-white mt-0.5">
-                      {COMPANY_INFO.location}
-                    </h4>
-                    <p className="text-xs text-zinc-400 mt-1">
-                      Delivering across Kanhangad, Nileshwar, Bekal, Kasaragod, and nearby areas.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              </StaggerItem>
 
               {/* Instagram Card */}
-              <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
-                      <InstagramIcon className="w-4 h-4" />
+              <StaggerItem>
+                <div className="bg-[#121418] border border-zinc-800 rounded-xl p-5">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
+                        <InstagramIcon className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="text-xs text-zinc-400 block">
+                          Instagram
+                        </span>
+                        <h4 className="text-sm font-semibold text-white">
+                          {COMPANY_INFO.instagramHandle}
+                        </h4>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-xs text-zinc-400 block">
-                        Instagram
-                      </span>
-                      <h4 className="text-sm font-semibold text-white">
-                        {COMPANY_INFO.instagramHandle}
-                      </h4>
-                    </div>
-                  </div>
 
-                  <a
-                    href={COMPANY_INFO.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white transition-colors"
-                    title="Open Instagram"
-                  >
-                    <ArrowUpRight className="w-4 h-4" />
-                  </a>
+                    <a
+                      href={COMPANY_INFO.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-white transition-colors"
+                      title="Open Instagram"
+                    >
+                      <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
 
             {/* Right Column: Enquiry Form */}
-            <div className="lg:col-span-7">
+            <ScrollReveal direction="right" delay={0.1} className="lg:col-span-7">
               <div className="bg-[#121418] border border-zinc-800 rounded-xl p-6 sm:p-8 space-y-6">
                 <div>
                   <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
@@ -481,7 +504,7 @@ export default function Contact() {
                   </form>
                 )}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -489,42 +512,48 @@ export default function Contact() {
       {/* WORKING HOURS & DELIVERY INFO */}
       <section className="py-16 bg-[#121418]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2">
-              <h3 className="text-base font-semibold text-white">
-                Working Hours
-              </h3>
-              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                Monday to Saturday: 6:00 AM – 8:00 PM <br />
-                Sunday: Available for pre-booked concrete work.
-              </p>
-            </div>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <StaggerItem>
+              <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2 h-full">
+                <h3 className="text-base font-semibold text-white">
+                  Working Hours
+                </h3>
+                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                  Monday to Saturday: 6:00 AM – 8:00 PM <br />
+                  Sunday: Available for pre-booked concrete work.
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2">
-              <h3 className="text-base font-semibold text-white">
-                Delivery Areas
-              </h3>
-              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                Kanhangad, Kasaragod, Bekal, Nileshwar, Cheruvathur, Uduma, Pallikkara, Kotikulam, and nearby areas.
-              </p>
-            </div>
+            <StaggerItem>
+              <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2 h-full">
+                <h3 className="text-base font-semibold text-white">
+                  Delivery Areas
+                </h3>
+                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                  Kanhangad, Kasaragod, Bekal, Nileshwar, Cheruvathur, Uduma, Pallikkara, Kotikulam, and nearby areas.
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2">
-              <h3 className="text-base font-semibold text-white">
-                Urgent Site Delivery
-              </h3>
-              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                For urgent concrete pours or same-day loads, please call directly on{' '}
-                <a
-                  href={`tel:+91${COMPANY_INFO.phone1}`}
-                  className="text-amber-500 hover:text-amber-400 font-semibold"
-                >
-                  {COMPANY_INFO.phone1Display}
-                </a>
-                .
-              </p>
-            </div>
-          </div>
+            <StaggerItem>
+              <div className="bg-[#0B0C0E] border border-zinc-800 p-6 rounded-xl space-y-2 h-full">
+                <h3 className="text-base font-semibold text-white">
+                  Urgent Site Delivery
+                </h3>
+                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                  For urgent concrete pours or same-day loads, please call directly on{' '}
+                  <a
+                    href={`tel:+91${COMPANY_INFO.phone1}`}
+                    className="text-amber-500 hover:text-amber-400 font-semibold"
+                  >
+                    {COMPANY_INFO.phone1Display}
+                  </a>
+                  .
+                </p>
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
     </div>

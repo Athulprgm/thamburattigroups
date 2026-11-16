@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, MessageSquare } from 'lucide-react';
 import logoImg from '../assets/images/logo-transparent.png';
 import { InstagramIcon } from './Icons';
 import { COMPANY_INFO, SERVICES_DATA } from '../data/companyData';
@@ -14,13 +14,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Column 1: Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-3 focus:outline-none">
+            <Link to="/" className="flex items-center gap-2.5 focus:outline-none">
               <img
                 src={logoImg}
                 alt="Thamburatti Group Logo"
-                className="h-12 w-auto object-contain shrink-0"
+                className="h-9 w-auto object-contain shrink-0"
               />
-              <span className="font-display text-xl font-bold uppercase tracking-wide text-white">
+              <span className="font-display text-lg font-bold uppercase tracking-wide text-white">
                 Thamburatti <span className="text-amber-500">Group</span>
               </span>
             </Link>
@@ -116,6 +116,19 @@ export default function Footer() {
                   className="text-zinc-200 hover:text-amber-400 font-medium transition-colors"
                 >
                   {COMPANY_INFO.phone2Display}
+                </a>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+                <a
+                  href={`https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
+                    'Hello Thamburatti Group, I would like to enquire about construction materials.'
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-200 hover:text-emerald-400 font-medium transition-colors"
+                >
+                  {COMPANY_INFO.whatsappDisplay} (WhatsApp)
                 </a>
               </div>
             </div>

@@ -15,7 +15,7 @@ export default function App() {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-[#0B0C0E] text-[#F3F4F6] font-['Plus_Jakarta_Sans'] selection:bg-[#F59E0B] selection:text-[#0B0C0E]">
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

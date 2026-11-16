@@ -1,15 +1,27 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { MessageSquare, Check } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
-export default function ServiceCard({ service }) {
-  const whatsappUrl = `https://wa.me/91${COMPANY_INFO.phone1}?text=${encodeURIComponent(
+export default function ServiceCard({ service, index = 0 }) {
+  const whatsappUrl = `https://wa.me/91${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(
     service.whatsappMessage ||
       `Hello Thamburatti Group, I would like to enquire about ${service.name} supply in Kanhangad / Kasaragod.`
   )}`;
 
   return (
-    <div className="bg-[#121418] border border-zinc-800 hover:border-zinc-700 rounded-xl p-6 flex flex-col justify-between transition-colors">
+    <motion.div
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.1,
+        ease: [0.22, 1, 0.36, 1]
+      }}
+      whileHover={{ y: -4 }}
+      className="bg-[#121418] border border-zinc-800 hover:border-amber-500/40 rounded-xl p-6 flex flex-col justify-between transition-colors h-full"
+    >
       <div className="space-y-4">
         <div className="border-b border-zinc-800 pb-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-amber-500 block">
@@ -51,6 +63,6 @@ export default function ServiceCard({ service }) {
           <span>Enquire on WhatsApp</span>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
